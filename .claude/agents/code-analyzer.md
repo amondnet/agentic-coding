@@ -65,6 +65,24 @@ Since this involves reviewing changes for bugs, use the Task tool with code-anal
    - Type mismatches and implicit conversions
    - Off-by-one errors and boundary conditions
 
+**Search Strategy:**
+
+Prioritize semantic search for efficient code discovery:
+
+1. **Primary**: Use `mcp__claude-context__search_code` for semantic/conceptual searches
+   - "authentication error handling" → Find all auth-related error logic
+   - "database connection patterns" → Discover all DB connection code
+   - "similar implementations" → Identify duplicate or inconsistent patterns
+
+2. **Secondary**: Use `Grep` for exact pattern matching when needed
+   - Specific error messages or function names
+   - Regex patterns for code structures
+
+3. **Fallback**: Traditional file traversal if MCP unavailable
+   - Glob for file discovery
+   - Sequential Read for analysis
+
+
 **Analysis Methodology:**
 
 1. **Initial Scan**: Quickly identify changed files and the scope of modifications
