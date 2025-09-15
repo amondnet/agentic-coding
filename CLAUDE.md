@@ -89,7 +89,8 @@ Use agents proactively for context-heavy tasks:
 # For parallel work:
 # Use parallel-worker to coordinate multiple streams
 ```
-
-@AGENTS.md
+@STANDARDS.md
+@TESTING.md
+@TDD.md
 @memory/constitution.md
 @SUBAGENT.md
